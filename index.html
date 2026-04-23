@@ -15,6 +15,28 @@
 html{scroll-behavior:smooth;}
 body{font-family:'Segoe UI',system-ui,sans-serif;color:var(--text);background:var(--bg);line-height:1.7;}
 
+
+/* Elegant pull quotes */
+.pull-quote{
+  border-left:3px solid var(--mid);
+  margin:0 0 2.5rem 0;
+  padding:1.25rem 1.75rem;
+  background:linear-gradient(135deg,rgba(230,241,251,0.5),rgba(225,245,238,0.3));
+  border-radius:0 var(--radius) var(--radius) 0;
+}
+.pull-quote blockquote{
+  font-size:1.1rem;
+  font-style:italic;
+  color:var(--navy);
+  line-height:1.8;
+  font-weight:400;
+  margin:0;
+  font-family:'Georgia',serif;
+  letter-spacing:0.01em;
+}
+.pull-quote blockquote::before{content:'\201C';font-size:2rem;color:var(--mid);line-height:0;vertical-align:-0.5rem;margin-right:0.15rem;font-family:'Georgia',serif;}
+.pull-quote blockquote::after{content:'\201D';font-size:2rem;color:var(--mid);line-height:0;vertical-align:-0.5rem;margin-left:0.15rem;font-family:'Georgia',serif;}
+
 /* NAV */
 nav{position:sticky;top:0;z-index:100;background:rgba(4,44,83,0.97);backdrop-filter:blur(8px);padding:0 2rem;display:flex;align-items:center;gap:0;box-shadow:0 2px 20px rgba(0,0,0,0.2);}
 .nav-brand{display:flex;align-items:center;gap:0.6rem;color:#fff;font-size:1.1rem;font-weight:600;letter-spacing:0.5px;padding:1rem 0;margin-right:auto;text-decoration:none;}
@@ -225,47 +247,21 @@ footer p{font-size:0.82rem;}
 </div>
 
 <section>
+  <div class="pull-quote"><blockquote>Not all those who wander are lost — but having a north star sure helps.</blockquote></div>
   <div class="section-eyebrow">What we do</div>
   <div class="section-title">Comprehensive Business Advisory</div>
   <div class="section-sub">From startup feasibility to enterprise optimization — North Star Business Coaching and Advisory brings strategic clarity to every stage of your business journey.</div>
 
-  <!-- SVG illustration: compass rose -->
-  <div style="text-align:center;margin-bottom:2rem;">
-    <svg viewBox="0 0 480 120" width="100%" style="max-width:480px;">
-      <defs>
-        <linearGradient id="cg" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" style="stop-color:#042C53"/>
-          <stop offset="100%" style="stop-color:#378ADD"/>
-        </linearGradient>
-      </defs>
-      <!-- orbit line -->
-      <ellipse cx="240" cy="60" rx="220" ry="30" fill="none" stroke="#e2eaf4" stroke-width="1"/>
-      <!-- nodes -->
-      <circle cx="20" cy="60" r="14" fill="#E6F1FB"/><text x="20" y="65" text-anchor="middle" font-size="14">🎯</text>
-      <circle cx="80" cy="38" r="14" fill="#E6F1FB"/><text x="80" y="43" text-anchor="middle" font-size="14">📊</text>
-      <circle cx="155" cy="33" r="14" fill="#E6F1FB"/><text x="155" y="38" text-anchor="middle" font-size="14">💼</text>
-      <circle cx="240" cy="30" r="22" fill="url(#cg)"/><text x="240" y="37" text-anchor="middle" font-size="18" fill="white">✦</text>
-      <circle cx="325" cy="33" r="14" fill="#E6F1FB"/><text x="325" y="38" text-anchor="middle" font-size="14">⚙️</text>
-      <circle cx="400" cy="38" r="14" fill="#E6F1FB"/><text x="400" y="43" text-anchor="middle" font-size="14">🔄</text>
-      <circle cx="460" cy="60" r="14" fill="#E6F1FB"/><text x="460" y="65" text-anchor="middle" font-size="14">💡</text>
-      <!-- labels -->
-      <text x="240" y="20" text-anchor="middle" font-size="9" fill="#185FA5" font-weight="600" letter-spacing="2">NORTH STAR COACHING</text>
-      <text x="20" y="84" text-anchor="middle" font-size="8" fill="#556">Biz Dev</text>
-      <text x="80" y="62" text-anchor="middle" font-size="8" fill="#556">Feasibility</text>
-      <text x="155" y="57" text-anchor="middle" font-size="8" fill="#556">Grants</text>
-      <text x="325" y="57" text-anchor="middle" font-size="8" fill="#556">Process</text>
-      <text x="400" y="62" text-anchor="middle" font-size="8" fill="#556">Data</text>
-      <text x="460" y="84" text-anchor="middle" font-size="8" fill="#556">Funding</text>
-    </svg>
-  </div>
+  
+    <div
 
   <div class="services-grid">
-    <div class="svc" onclick="toggleSvc(this,'d1')"><div class="svc-icon-wrap" style="background:#E6F1FB;">🎯</div><div class="svc-tag" style="background:#E6F1FB;color:#185FA5;">Growth</div><h3>Business Development</h3><p>Revenue strategy, partnerships, and market expansion frameworks that drive sustainable pipeline growth.</p><div class="svc-arrow">Explore →</div></div>
-    <div class="svc" onclick="toggleSvc(this,'d2')"><div class="svc-icon-wrap" style="background:#F1EFE8;">♟️</div><div class="svc-tag" style="background:#F1EFE8;color:#5F5E5A;">Strategy</div><h3>Business Strategy</h3><p>Competitive positioning, vision development, OKR-based goal setting, and 90-day execution roadmaps that actually get used.</p><div class="svc-arrow">Explore →</div></div>
-    <div class="svc" onclick="toggleSvc(this,'d3')"><div class="svc-icon-wrap" style="background:#E1F5EE;">💼</div><div class="svc-tag" style="background:#E1F5EE;color:#0F6E56;">Funding</div><h3>Grant Research &amp; Applications</h3><p>Identify and secure funding through grants perfectly matched to your mission and growth stage.</p><div class="svc-arrow">Explore →</div></div>
-    <div class="svc" onclick="toggleSvc(this,'d4')"><div class="svc-icon-wrap" style="background:#FAEEDA;">⚙️</div><div class="svc-tag" style="background:#FAEEDA;color:#854F0B;">Operations</div><h3>Process Optimization</h3><p>Eliminate waste, reduce friction, and accelerate throughput using lean principles and process mapping.</p><div class="svc-arrow">Explore →</div></div>
-    <div class="svc" onclick="toggleSvc(this,'d5')"><div class="svc-icon-wrap" style="background:#EEEDFE;">🔄</div><div class="svc-tag" style="background:#EEEDFE;color:#534AB7;">Data</div><h3>Data Flow &amp; Transformation</h3><p>Connect and activate your data — architecture, pipelines, and transformation for smarter decisions.</p><div class="svc-arrow">Explore →</div></div>
-    <div class="svc" onclick="toggleSvc(this,'d6')"><div class="svc-icon-wrap" style="background:#FAECE7;">💡</div><div class="svc-tag" style="background:#FAECE7;color:#993C1D;">Capital</div><h3>Funding &amp; Credit Consulting</h3><p>Business credit building, funding option evaluation, and capital stack strategy to unlock growth capital.</p><div class="svc-arrow">Explore →</div></div>
+    <div class="svc" onclick="showPage('services',document.querySelectorAll('nav a')[2])"><div class="svc-icon-wrap" style="background:#E6F1FB;">🎯</div><div class="svc-tag" style="background:#E6F1FB;color:#185FA5;">Growth</div><h3>Business Development</h3><p>Revenue strategy, partnerships, and market expansion frameworks that drive sustainable pipeline growth.</p><div class="svc-arrow">View all services →</div></div>
+    <div class="svc" onclick="showPage('services',document.querySelectorAll('nav a')[2])"><div class="svc-icon-wrap" style="background:#F1EFE8;">♟️</div><div class="svc-tag" style="background:#F1EFE8;color:#5F5E5A;">Strategy</div><h3>Business Strategy</h3><p>Competitive positioning, vision development, OKR-based goal setting, and 90-day execution roadmaps that actually get used.</p><div class="svc-arrow">View all services →</div></div>
+    <div class="svc" onclick="showPage('services',document.querySelectorAll('nav a')[2])"><div class="svc-icon-wrap" style="background:#E1F5EE;">💼</div><div class="svc-tag" style="background:#E1F5EE;color:#0F6E56;">Funding</div><h3>Grant Research &amp; Applications</h3><p>Identify and secure funding through grants perfectly matched to your mission and growth stage.</p><div class="svc-arrow">View all services →</div></div>
+    <div class="svc" onclick="showPage('services',document.querySelectorAll('nav a')[2])"><div class="svc-icon-wrap" style="background:#FAEEDA;">⚙️</div><div class="svc-tag" style="background:#FAEEDA;color:#854F0B;">Operations</div><h3>Process Optimization</h3><p>Eliminate waste, reduce friction, and accelerate throughput using lean principles and process mapping.</p><div class="svc-arrow">View all services →</div></div>
+    <div class="svc" onclick="showPage('services',document.querySelectorAll('nav a')[2])"><div class="svc-icon-wrap" style="background:#EEEDFE;">🔄</div><div class="svc-tag" style="background:#EEEDFE;color:#534AB7;">Data</div><h3>Data Flow &amp; Transformation</h3><p>Connect and activate your data — architecture, pipelines, and transformation for smarter decisions.</p><div class="svc-arrow">View all services →</div></div>
+    <div class="svc" onclick="showPage('services',document.querySelectorAll('nav a')[2])"><div class="svc-icon-wrap" style="background:#FAECE7;">💡</div><div class="svc-tag" style="background:#FAECE7;color:#993C1D;">Capital</div><h3>Funding &amp; Credit Consulting</h3><p>Business credit building, funding option evaluation, and capital stack strategy to unlock growth capital.</p><div class="svc-arrow">View all services →</div></div>
     <div class="svc-detail" id="d1"><h4>Business Development</h4><p>Go-to-market, partnerships, revenue diversification, and new market entry. Includes competitive mapping, ICP definition, partnership frameworks, and revenue modeling.</p></div>
     <div class="svc-detail" id="d2"><h4>Business Strategy</h4><p>We facilitate strategic planning that produces real clarity — not binders that collect dust. Includes competitive positioning, SWOT, OKR-based goal setting, and 90-day execution roadmaps.</p></div>
     <div class="svc-detail" id="d3"><h4>Grant Research &amp; Applications</h4><p>Federal SBIR/STTR, state economic development, and foundation funding. Full lifecycle from research to submission to reporting requirements.</p></div>
@@ -311,55 +307,10 @@ footer p{font-size:0.82rem;}
 <!-- ═══════════════ SERVICES ═══════════════ -->
 <div id="services" class="page">
 <section>
+  <div class="pull-quote"><blockquote>The right advisor doesn't just solve today's problem — they help you see around corners.</blockquote></div>
   <div class="section-eyebrow">Services</div>
   <div class="section-title">Everything you need to grow and scale</div>
   <div class="section-sub">Nine integrated service areas — delivered remotely, wherever your business takes you.</div>
-
-  <!-- SVG: service ecosystem diagram -->
-  <div style="text-align:center;margin:1.5rem 0 2rem;">
-    <svg viewBox="0 0 500 200" width="100%" style="max-width:540px;">
-      <defs>
-        <linearGradient id="sg" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:#042C53"/>
-          <stop offset="100%" style="stop-color:#185FA5"/>
-        </linearGradient>
-      </defs>
-      <!-- center -->
-      <circle cx="250" cy="100" r="40" fill="url(#sg)"/>
-      <text x="250" y="96" text-anchor="middle" font-size="11" fill="white" font-weight="600">North Star</text>
-      <text x="250" y="110" text-anchor="middle" font-size="11" fill="#B5D4F4">Coaching</text>
-      <!-- spokes -->
-      <line x1="250" y1="60" x2="250" y2="18" stroke="#e2eaf4" stroke-width="1.5"/>
-      <line x1="250" y1="140" x2="250" y2="182" stroke="#e2eaf4" stroke-width="1.5"/>
-      <line x1="210" y1="100" x2="148" y2="100" stroke="#e2eaf4" stroke-width="1.5"/>
-      <line x1="290" y1="100" x2="352" y2="100" stroke="#e2eaf4" stroke-width="1.5"/>
-      <line x1="222" y1="72" x2="178" y2="40" stroke="#e2eaf4" stroke-width="1.5"/>
-      <line x1="278" y1="72" x2="322" y2="40" stroke="#e2eaf4" stroke-width="1.5"/>
-      <line x1="222" y1="128" x2="178" y2="160" stroke="#e2eaf4" stroke-width="1.5"/>
-      <line x1="278" y1="128" x2="322" y2="160" stroke="#e2eaf4" stroke-width="1.5"/>
-      <line x1="210" y1="88" x2="165" y2="65" stroke="#e2eaf4" stroke-width="1.5"/>
-      <!-- outer nodes -->
-      <circle cx="250" cy="10" r="14" fill="#E6F1FB"/><text x="250" y="15" text-anchor="middle" font-size="12">♟️</text>
-      <circle cx="250" cy="190" r="14" fill="#E6F1FB"/><text x="250" y="195" text-anchor="middle" font-size="12">🏗️</text>
-      <circle cx="130" cy="100" r="14" fill="#E6F1FB"/><text x="130" y="105" text-anchor="middle" font-size="12">🎯</text>
-      <circle cx="370" cy="100" r="14" fill="#E6F1FB"/><text x="370" y="105" text-anchor="middle" font-size="12">💡</text>
-      <circle cx="165" cy="32" r="14" fill="#E6F1FB"/><text x="165" y="37" text-anchor="middle" font-size="12">📊</text>
-      <circle cx="335" cy="32" r="14" fill="#E6F1FB"/><text x="335" y="37" text-anchor="middle" font-size="12">💼</text>
-      <circle cx="165" cy="168" r="14" fill="#E6F1FB"/><text x="165" y="173" text-anchor="middle" font-size="12">⚙️</text>
-      <circle cx="335" cy="168" r="14" fill="#E6F1FB"/><text x="335" y="173" text-anchor="middle" font-size="12">🔄</text>
-      <circle cx="148" cy="58" r="14" fill="#E6F1FB"/><text x="148" y="63" text-anchor="middle" font-size="12">📁</text>
-      <!-- labels -->
-      <text x="250" y="4" text-anchor="middle" font-size="7" fill="#556">Strategy</text>
-      <text x="250" y="196" text-anchor="middle" font-size="7" fill="#556">Org</text>
-      <text x="106" y="100" text-anchor="middle" font-size="7" fill="#556">Biz Dev</text>
-      <text x="395" y="98" text-anchor="middle" font-size="7" fill="#556">Funding</text>
-      <text x="155" y="28" text-anchor="middle" font-size="7" fill="#556">Feasibility</text>
-      <text x="345" y="28" text-anchor="middle" font-size="7" fill="#556">Grants</text>
-      <text x="150" y="174" text-anchor="middle" font-size="7" fill="#556">Process</text>
-      <text x="348" y="174" text-anchor="middle" font-size="7" fill="#556">Data</text>
-      <text x="132" y="60" text-anchor="middle" font-size="7" fill="#556">Portfolio</text>
-    </svg>
-  </div>
 
   <div class="services-grid" style="grid-template-columns:repeat(3,1fr);">
     <div class="svc" onclick="toggleSvc(this,'sd1')"><div class="svc-icon-wrap" style="background:#E6F1FB;">🎯</div><div class="svc-tag" style="background:#E6F1FB;color:#185FA5;">Growth</div><h3>Business Development</h3><p>Revenue strategy, partnerships, and market entry frameworks. Competitive mapping, ICP definition, and sustainable pipeline building.</p><div class="svc-arrow">Click to learn more →</div></div>
@@ -393,6 +344,7 @@ footer p{font-size:0.82rem;}
 <!-- ═══════════════ ABOUT ═══════════════ -->
 <div id="about" class="page">
 <section>
+  <div class="pull-quote"><blockquote>I've sat on both sides of the table. I know what it takes to build, and I know what it costs when you don't have the right support.</blockquote></div>
   <div class="section-eyebrow">About</div>
   <div class="section-title">Meet Heather North</div>
   <div class="about-wrap">
@@ -425,19 +377,23 @@ footer p{font-size:0.82rem;}
   <div class="section-eyebrow">Philosophy</div>
   <div class="section-title">How we work</div>
 
-  <!-- SVG: value triangle -->
-  <div style="text-align:center;margin:1.5rem 0;">
-    <svg viewBox="0 0 400 140" width="100%" style="max-width:420px;">
-      <polygon points="200,10 380,130 20,130" fill="#E6F1FB" stroke="#378ADD" stroke-width="1.5"/>
-      <text x="200" y="52" text-anchor="middle" font-size="11" fill="#042C53" font-weight="600">Diagnose First</text>
-      <text x="200" y="65" text-anchor="middle" font-size="9" fill="#556">Listen before prescribing</text>
-      <text x="82" y="122" text-anchor="middle" font-size="11" fill="#042C53" font-weight="600">Practical</text>
-      <text x="82" y="134" text-anchor="middle" font-size="9" fill="#556">Actionable deliverables</text>
-      <text x="318" y="122" text-anchor="middle" font-size="11" fill="#042C53" font-weight="600">Remote-Ready</text>
-      <text x="318" y="134" text-anchor="middle" font-size="9" fill="#556">Work anywhere</text>
-      <!-- center star -->
-      <text x="200" y="102" text-anchor="middle" font-size="22">✦</text>
-    </svg>
+  <!-- Value pillars -->
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0;">
+    <div style="background:linear-gradient(135deg,#E6F1FB,#B5D4F4);border-radius:16px;padding:1.5rem;text-align:center;">
+      <div style="font-size:28px;margin-bottom:0.75rem;">🔍</div>
+      <div style="font-size:0.95rem;font-weight:700;color:#042C53;margin-bottom:0.4rem;">Diagnose First</div>
+      <div style="font-size:0.82rem;color:#185FA5;line-height:1.5;">Listen before prescribing</div>
+    </div>
+    <div style="background:linear-gradient(135deg,#042C53,#185FA5);border-radius:16px;padding:1.5rem;text-align:center;">
+      <div style="font-size:28px;margin-bottom:0.75rem;">★</div>
+      <div style="font-size:0.95rem;font-weight:700;color:white;margin-bottom:0.4rem;">North Star</div>
+      <div style="font-size:0.82rem;color:#B5D4F4;line-height:1.5;">Your guide to clarity</div>
+    </div>
+    <div style="background:linear-gradient(135deg,#E1F5EE,#9FE1CB);border-radius:16px;padding:1.5rem;text-align:center;">
+      <div style="font-size:28px;margin-bottom:0.75rem;">🌐</div>
+      <div style="font-size:0.95rem;font-weight:700;color:#0F6E56;margin-bottom:0.4rem;">Remote-Ready</div>
+      <div style="font-size:0.82rem;color:#0F6E56;line-height:1.5;">Work anywhere there is internet</div>
+    </div>
   </div>
 
   <div class="approach-grid">
@@ -451,6 +407,7 @@ footer p{font-size:0.82rem;}
 <!-- ═══════════════ INSIGHTS ═══════════════ -->
 <div id="insights" class="page">
 <section>
+  <div class="pull-quote"><blockquote>The businesses that thrive aren't the ones with all the answers — they're the ones asking better questions.</blockquote></div>
   <div class="section-eyebrow">Insights</div>
   <div class="section-title">Practical thinking for business leaders</div>
   <div class="section-sub">Perspectives on strategy, operations, funding, and leadership from the North Star Business Coaching and Advisory team.</div>
@@ -505,6 +462,7 @@ footer p{font-size:0.82rem;}
 <!-- ═══════════════ CONTACT ═══════════════ -->
 <div id="contact" class="page">
 <section>
+  <div class="pull-quote"><blockquote>The best business conversations start with "I'm not sure where to begin." That's exactly where we come in.</blockquote></div>
   <div class="section-eyebrow">Book a Meeting</div>
   <div class="section-title">Request an Initial Consultation</div>
   <div class="section-sub">Initial consultations are complimentary — no commitment required. Heather will be in touch within 1 business day.</div>
